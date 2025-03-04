@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 뭐 먹지?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>오늘 뭐 먹지? </h1>
+        <button id="recommend-btn">추천받기</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        document.getElementById("recommend-btn").addEventListener("click", function() {
+            fetch("/recommend")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").textContent = "추천 메뉴: " + data.food;
+                })
+                .catch(error => console.error("에러 발생:", error));
+        });
+    </script>
+</body>
+</html>
