@@ -7,3 +7,7 @@ random 라이브러리를 사용하여 foods.json 에 있는 음식 데이터를
 [+] ngrok을 사용한 배포까지 성공
 
 ~~css와 json은 GPT가 도와주었다~~
+
+예시 이미지)
+<br/>
+![스크린샷 2025-03-04 190019](https://github.com/user-attachments/assets/5224a1c9-c272-49a9-a74b-383149b9101a)
